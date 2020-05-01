@@ -8,8 +8,6 @@ function! s:SlantActiveStatusLine()
         let s:statusline.="\ "
         let s:statusline.="%="
         let s:statusline.="%#StatusLineinfo#%{spaceline#spaceline#VimacsLineinfo()}"
-        let s:statusline.="%#EndSeperate#"
-        let s:statusline.=g:sep.EndSeperate
         return s:statusline
     endif
     let s:statusline=""
@@ -84,8 +82,6 @@ function! s:SlantActiveStatusLine()
     let s:statusline.=g:sep.lineformatright
     let s:statusline.="\ "
     let s:statusline.="%#StatusLineinfo#%{spaceline#spaceline#VimacsLineinfo()}"
-    let s:statusline.="%#EndSeperate#"
-    let s:statusline.=g:sep.EndSeperate
     return s:statusline
 endfunction
 
@@ -100,8 +96,6 @@ function! s:SlantInActiveStatusLine()
     let s:statusline.="\ "
     let s:statusline.="%="
     let s:statusline.="%#StatusLineinfo#%{spaceline#spaceline#VimacsLineinfo()}"
-    let s:statusline.="%#EndSeperate#"
-    let s:statusline.=g:sep.EndSeperate
     return s:statusline
 endfunction
 
@@ -117,8 +111,6 @@ function! s:ActiveStatusLine()
         let s:statusline.="\ "
         let s:statusline.="%="
         let s:statusline.="%#StatusLineinfo#%{spaceline#spaceline#VimacsLineinfo()}"
-        let s:statusline.="%#EndSeperate#"
-        let s:statusline.=g:sep.EndSeperate
         return s:statusline
     endif
     let s:statusline=""
@@ -191,8 +183,6 @@ function! s:ActiveStatusLine()
     let s:statusline.="%#LineFormatRight#"
     let s:statusline.=g:sep.lineformatright
     let s:statusline.="%#StatusLineinfo#%{spaceline#spaceline#VimacsLineinfo()}"
-    let s:statusline.="%#EndSeperate#"
-    let s:statusline.=g:sep.EndSeperate
     return s:statusline
 endfunction
 function! s:InActiveStatusLine()
@@ -205,8 +195,6 @@ function! s:InActiveStatusLine()
     let s:statusline.="\ "
     let s:statusline.="%="
     let s:statusline.="%#StatusLineinfo#%{spaceline#spaceline#VimacsLineinfo()}"
-    let s:statusline.="%#EndSeperate#"
-    let s:statusline.=g:sep.EndSeperate
     return s:statusline
 endfunction
 
