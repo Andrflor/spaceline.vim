@@ -165,7 +165,13 @@ function! spaceline#spaceline#VimacsFilenameActive() abort
   endif
   let mo = s:vimacsline_modified()
   let fname = VimacsLineFilename()
+	if match(fname, "\[0-9]......") >= 0
+		let fname = substitute(fname, "\[0-9].....\[0-9]*", "", "")
+	endif
   let icon = winwidth(0) > 70 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+	if match(fname, ".kt$") >= 0
+		let icon = ""
+	endif
   if s:symbol == 1
     if empty(mo)
       return fname
